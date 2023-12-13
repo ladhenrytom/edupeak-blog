@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark: #30364d;
+  --flex-red: #ee5758;
+  --grey-1: #798099;
+  --main-color: #9165f7;
+  --white: white;
+  --flex-smoke: whitesmoke;
+  --flex-midnight: #24303e;
+  --grey-3: #e6e8f0;
+  --gradient-2-light: #f8bb4b;
+  --gradient-2-dark: #f85252;
+  --grade-1-light: #b87df9;
+  --grade-1-dark: #6a4ee1;
+  --haze: ghostwhite;
+  --haze-dark: #ededff;
+  --flex-aquamarine: #61dabe;
+  --grey-2: #a9aec3;
+  --color-2: #f92468;
+  --grey-4: #928a97;
+  --light-slate-grey: #88929d;
+  --light-coral: #f85f73;
+  --dark-slate-blue: #283c63;
+  --color-3: #ffb543;
+  --color-4: #4ee484;
+  --gradient-3-dark: #5c71d9;
+  --gradient-3-light: #62d1f8;
+  --gradient-4-dark: #11aeaf;
+  --gradient-4-light: #84f796;
+  --antique-white: #fbe8d3;
+  --grade-1-light-2: #6999f7;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+h1 {
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: x-large;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: large;
+  font-weight: 600;
+}
+
+button {
+  font-weight: 700;
+}
+label {
+  font-weight: 400;
+}
+input,
+textarea {
+  font-size: small;
+  border: 2px solid var(--grey-3);
+  padding: 12px;
+  margin: 0 0 4px 0;
+  border-radius: 6px;
+  outline: none;
+}
+input:focus,
+textarea:focus {
+  border: 2px solid var(--grey-2);
+}
+
+hr {
+  height: 2px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: x-large;
+  }
+  h4 {
+    font-size: large;
+  }
+}
