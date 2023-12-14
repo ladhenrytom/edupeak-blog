@@ -46,7 +46,7 @@ export default function Comment({comment}) {
   }
 
   async function getReplies() {
-    const res = await fetch(`/api/comments/${comment._id}/replies`);
+    const res = await fetch(`/api/comments/${comment?._id}/replies`);
     if (res.ok) {
       const data = await res.json();
       setReplies(data);
