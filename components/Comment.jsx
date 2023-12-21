@@ -60,7 +60,7 @@ export default function Comment({comment}) {
   }, [comment]);
 
   return (
-    <span id={comment._id} className={` flex justify-between mb-6 p-2 border rounded-md scroll-mt-40`}>
+    <span id={comment._id} className={" flex justify-between mb-6 p-2 border rounded-md scroll-mt-40"}>
       <Avatar alt={creator?.username} src={creator?.image} className="w-10 h-10 mr-2 object-cover" />
       <div className="w-11/12 flex flex-col space-y-2">
         <span className="flex items-center">
@@ -94,9 +94,19 @@ export default function Comment({comment}) {
           </IconButton>
         </div>
         {showReplies && (
-          <div className="flex flex-col space-y-2 max-h-40 overflow-auto">
+          <div className="flex flex-col space-y-2 h-fit overflow-auto">
             {replies.map((r, i) => (
-              <span key={i} className="flex justify-between mb-6">
+              <Comment comment={r} key={i} />
+            ))}
+          </div>
+        )}
+      </div>
+    </span>
+  );
+}
+
+{
+  /* <span key={i} className="flex justify-between mb-6">
                 <Avatar alt={r.creator.username} src={r.creator.image} className="w-10 h-10 mr-2 object-cover" />
                 <div className="w-11/12 flex flex-col space-y-2">
                   <span className="flex items-center">
@@ -107,11 +117,5 @@ export default function Comment({comment}) {
                   </span>
                   <p className=" xs:text-xs md:text-sm bg-neutral-100 dark:bg-slate-700 max-h-60 p-2 rounded-md overflow-auto">{r.content}</p>
                 </div>
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
-    </span>
-  );
+              </span> */
 }
