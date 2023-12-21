@@ -89,7 +89,7 @@ export default function Comment({comment}) {
         )}
         <div className=" flex mb-2 pb-2 border-b">
           <p className=" text-sm mr-3">Replies</p>
-          <IconButton className="text-black dark:text-neutral-400 p-0 hover:bg-transparent" onClick={() => setShowReplies(prev => !prev)}>
+          <IconButton className="text-black dark:text-neutral-400 p-0 hover:bg-transparent" sx={{p: 0}} onClick={() => setShowReplies(prev => !prev)}>
             {showReplies ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
           </IconButton>
         </div>
